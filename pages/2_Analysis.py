@@ -40,6 +40,12 @@ if 'df_merged' not in st.session_state:
 
 df_merged = st.session_state.df_merged
 
+df_pessoas_municipio = df_merged.groupby('MUNICÍPIO')['pessoas'].sum().reset_index()
+df_pessoas_atendimentos = df_merged.groupby('MUNICÍPIO')['PRIMEIRO_NOME'].count().reset_index().rename(columns={'PRIMEIRO_NOME': 'VOLUME_ATENDIMENTOS'})
+df_total = df_pessoas_municipio.merge(df_pessoas_atendimentos, how='inner', on='MUNICÍPIO')
+df_total['DISCREPANCIA'] = df_total['pessoas'] < df_total['VOLUME_ATENDIMENTOS']
+
+# Total de municípios com atendimentos maior que o volume de pessoas
 # --- 🎛️ Filtros interativos ---
 with st.sidebar.form("filtro_form"):
     st.markdown("### 🔍 Filtros")
@@ -93,7 +99,7 @@ col1.plotly_chart(fig_bar, use_container_width=True)
 col2.plotly_chart(fig_sunburst, use_container_width=True)
 
 # Estatísticas adicionais
-col1, col2, col3 = st.columns(3)
+col1, col2, col3, col4 = st.columns(4)
 
 with col1:
     total_atendimentos = df_filtrado.shape[0]
@@ -106,6 +112,10 @@ with col2:
 with col3:
     nomes_unicos = df_filtrado['PRIMEIRO_NOME'].nunique()
     st.metric("Nomes Únicos", f"{nomes_unicos:,}")
+
+with col4:
+    st.metric("Total de Discrepancias", df_total['DISCREPANCIA'].sum(), help="Total de municípios com atendimentos maior que o volume de pessoas")
+
 
 # Tabela detalhada
 with st.expander("📋 Ver Dados Detalhados"):
