@@ -1,0 +1,408 @@
+/* Estilos Gerais */
+.main .block-container {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    max-width: 100%;
+}
+
+/* Header Personalizado */
+.main-header {
+    text-align: center;
+    padding: 3rem 2rem;
+    background: linear-gradient(135deg, #1f77b4, #2e86ab);
+    border-radius: 20px;
+    margin-bottom: 3rem;
+    color: white;
+    box-shadow: 0 8px 25px rgba(31, 119, 180, 0.3);
+}
+
+.main-header h1 {
+    color: white;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    border: none;
+    font-weight: 700;
+}
+
+.subtitle {
+    font-size: 1.4rem;
+    opacity: 0.95;
+    font-weight: 300;
+}
+
+/* Seção da Equipe */
+.team-section {
+    margin: 4rem 0;
+    padding: 2rem;
+    background: #f8f9fa;
+    border-radius: 15px;
+}
+
+.team-section h2 {
+    text-align: center;
+    color: #1f77b4;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.team-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    border-left: 5px solid #1f77b4;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.team-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+.team-member {
+    font-weight: bold;
+    color: #1f77b4;
+    margin-bottom: 0.8rem;
+    font-size: 1.2rem;
+}
+
+.team-id {
+    color: #666;
+    font-size: 1rem;
+    background: #f0f2f6;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    display: inline-block;
+}
+
+/* Cards de Métricas */
+.metric-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.metric-card {
+    background: white;
+    padding: 2.5rem 2rem;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    border-top: 5px solid #1f77b4;
+    transition: transform 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.metric-card:hover {
+    transform: translateY(-5px);
+}
+
+.metric-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, #1f77b4, #2e86ab);
+}
+
+.metric-title {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.metric-value {
+    font-size: 2.8rem;
+    font-weight: bold;
+    color: #1f77b4;
+    margin-bottom: 0.5rem;
+    line-height: 1;
+}
+
+.metric-desc {
+    font-size: 0.95rem;
+    color: #888;
+    font-weight: 400;
+}
+
+/* Navegação */
+.navigation-section {
+    margin: 4rem 0;
+    padding: 2rem;
+    background: #f8f9fa;
+    border-radius: 15px;
+}
+
+.navigation-section h2 {
+    text-align: center;
+    color: #1f77b4;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+.nav-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2.5rem;
+    margin-top: 2rem;
+}
+
+.nav-card {
+    background: white;
+    padding: 3rem 2rem;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    border: 3px solid transparent;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.nav-card:hover {
+    border-color: #1f77b4;
+    box-shadow: 0 12px 25px rgba(31, 119, 180, 0.2);
+    transform: translateY(-8px);
+}
+
+.nav-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(31, 119, 180, 0.1), transparent);
+    transition: left 0.5s;
+}
+
+.nav-card:hover::before {
+    left: 100%;
+}
+
+.nav-card h3 {
+    color: #1f77b4;
+    margin-bottom: 1.5rem;
+    border: none;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.nav-card p {
+    color: #666;
+    margin: 0;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* Tabelas Personalizadas */
+.custom-table {
+    background: white;
+    border-radius: 15px;
+    padding: 2.5rem;
+    margin: 2rem 0;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    border: 1px solid #e0e0e0;
+}
+
+.custom-table h3 {
+    color: #1f77b4;
+    margin-bottom: 1.5rem;
+    border: none;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.custom-table table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+}
+
+.custom-table th {
+    background: linear-gradient(135deg, #1f77b4, #2e86ab);
+    color: white;
+    padding: 1.2rem 1.5rem;
+    text-align: left;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.custom-table td {
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid #e0e0e0;
+    font-size: 0.95rem;
+}
+
+.custom-table tr:hover {
+    background-color: #f8f9fa;
+}
+
+/* Badges */
+.badge {
+    background: linear-gradient(135deg, #1f77b4, #2e86ab);
+    color: white;
+    padding: 0.5rem 1.2rem;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    display: inline-block;
+    margin: 0.3rem;
+    box-shadow: 0 3px 8px rgba(31, 119, 180, 0.3);
+}
+
+/* Expanders */
+.streamlit-expanderHeader {
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef) !important;
+    border-radius: 10px !important;
+    font-weight: 600 !important;
+    font-size: 1.2rem !important;
+    padding: 1.2rem 1.5rem !important;
+    border: 1px solid #dee2e6 !important;
+    margin: 1rem 0 !important;
+}
+
+.streamlit-expanderContent {
+    padding: 2rem !important;
+    background: white !important;
+    border-radius: 0 0 10px 10px !important;
+}
+
+/* Gráficos */
+.js-plotly-plot {
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    padding: 1.5rem;
+    background: white;
+    border: 1px solid #e0e0e0;
+}
+
+/* Sidebar */
+.css-1d391kg {
+    background-color: #f8f9fa;
+    padding: 2rem 1rem;
+}
+
+/* Botões */
+.stButton > button {
+    background: linear-gradient(135deg, #1f77b4, #2e86ab);
+    color: white;
+    border-radius: 8px;
+    border: none;
+    padding: 0.8rem 2rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+    box-shadow: 0 4px 12px rgba(31, 119, 180, 0.3);
+}
+
+.stButton > button:hover {
+    background: linear-gradient(135deg, #155d8c, #1a6b96);
+    color: white;
+    box-shadow: 0 6px 18px rgba(31, 119, 180, 0.4);
+    transform: translateY(-2px);
+}
+
+/* Formulários */
+.stMultiSelect > div > div {
+    border-radius: 8px !important;
+    border: 2px solid #e0e0e0 !important;
+}
+
+.stMultiSelect > div > div:hover {
+    border-color: #1f77b4 !important;
+}
+
+/* Dataframes */
+.stDataFrame {
+    border-radius: 10px;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Listas */
+.custom-table ul {
+    line-height: 1.8;
+    margin: 1rem 0;
+    padding-left: 1.5rem;
+}
+
+.custom-table li {
+    margin-bottom: 0.8rem;
+    font-size: 1rem;
+}
+
+.custom-table li strong {
+    color: #1f77b4;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .main .block-container {
+        padding: 1.5rem;
+    }
+    
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .nav-cards {
+        grid-template-columns: 1fr;
+    }
+    
+    .metric-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .main-header h1 {
+        font-size: 2rem;
+    }
+    
+    .metric-value {
+        font-size: 2rem;
+    }
+    
+    .custom-table {
+        padding: 1.5rem;
+    }
+}
+
+/* Animações suaves */
+* {
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+/* Scrollbar personalizada */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #1f77b4;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #155d8c;
+}
