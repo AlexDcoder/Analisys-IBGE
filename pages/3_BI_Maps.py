@@ -32,6 +32,7 @@ if "df_original" not in st.session_state or "df_ibge" not in st.session_state:
 
 # Preparar dados
 df_original = st.session_state.df_original.copy()
+df_original.dropna(subset=['PRIMEIRO_NOME'], inplace=True)
 df_ibge = st.session_state.df_ibge.copy()
 
 # Limpar e padronizar dados
