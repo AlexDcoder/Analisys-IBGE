@@ -71,18 +71,10 @@ with st.expander("🔍 Visualização Completa dos Dados", expanded=True):
         st.markdown("### Dataset Completo - Atendimentos SUS")
         st.dataframe(df_original, use_container_width=True, height=600)
         
-        # Estatísticas descritivas
-        st.markdown("#### Estatísticas Descritivas")
-        st.dataframe(df_original.describe(include='all'), use_container_width=True)
     
     with tab2:
         st.markdown("### Dataset Completo - IBGE")
         st.dataframe(df_ibge, use_container_width=True, height=600)
-        
-        # Estatísticas descritivas
-        if 'pessoas' in df_ibge.columns:
-            st.markdown("#### Estatísticas Populacionais")
-            st.dataframe(df_ibge['pessoas'].describe(), use_container_width=True)
 
 # Informações detalhadas dos datasets
 st.markdown('<div class="metric-container">', unsafe_allow_html=True)
