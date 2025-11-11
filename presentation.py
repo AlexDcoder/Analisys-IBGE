@@ -30,24 +30,20 @@ st.markdown("""
     <h2>👥 Nossa Equipe</h2>
     <div class="team-grid">
         <div class="team-card">
+            <div class="team-member">Alexandre Henrique</div>
+            <div class="team-id">2210375</div>
+        </div>
+        <div class="team-card">
             <div class="team-member">Alexandre Pinto Franco</div>
             <div class="team-id">2214674</div>
         </div>
         <div class="team-card">
-            <div class="team-member">Lucas de Matos Oliveira</div>
-            <div class="team-id">2214626</div>
-        </div>
-        <div class="team-card">
-            <div class="team-member">Lucas Melo De Souza</div>
-            <div class="team-id">2214628</div>
+            <div class="team-member">Felipe Pascoal</div>
+            <div class="team-id">2214671</div>
         </div>
         <div class="team-card">
             <div class="team-member">Natan Coelho Pucci Benevides</div>
             <div class="team-id">2111126</div>
-        </div>
-        <div class="team-card">
-            <div class="team-member">Paulo Ruan</div>
-            <div class="team-id">2218935</div>
         </div>
     </div>
 </div>
